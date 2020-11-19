@@ -5,6 +5,13 @@ const port = process.env.PORT || 3000;
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
+
+app.get('/port', (req, res) => {
+  res.send(port);
+  console.log(port);
+});
+
+
 app.get('/myip', (req, res) => {
   res.send("your ip is: " + req.ip + "!");
 });
